@@ -1,5 +1,6 @@
 console.log('***** Music Collection *****')
 let collection = [];
+let limboArray = [];
 
 function addToCollection(title, artist, yearPublished){
   let album = {
@@ -28,17 +29,18 @@ showCollection(collection)
 
 function findByArtist(artist){
   for ( let i=0; i<collection.length; i++){
-    let limboArray = [];
     if (collection[i].artist === artist){
       limboArray.push(collection[i]);
-      return limboArray;
-    }
-    else{
-      console.log('No Results');
-      return limboArray;
     }
   }
+  return limboArray
 }
-console.log(findByArtist('Q'));
-console.log(findByArtist('Jackson Five'));
 console.log(findByArtist('Michael Jackson'));
+
+limboArray=[]
+
+console.log(findByArtist('Jackson Five'));
+
+limboArray=[]
+
+console.log(findByArtist('Not an Album'));
